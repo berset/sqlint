@@ -53,6 +53,7 @@ def main(files, config_file, is_format):
             else:
                 trees[f] = SyntaxTree.sqlptree(fp.read())
 
+    errs = False
     for file, tree in trees.items():
         if is_format:
             formatted_tree = format_tree(tree, config)
@@ -60,7 +61,10 @@ def main(files, config_file, is_format):
         else:
             tree.sqlftree()
             for v in sorted(check_tree(tree, config)):
+                errs = True
                 logger.info('{} {}'.format(file, v))
+    if errs:
+        exit(1)
 
 
 if __name__ == '__main__':
