@@ -1,0 +1,6 @@
+-   id: sqlint
+    name: lint BigQuery SQL files
+    description: Checks for consistent bigquery syntax
+    entry: sqlint
+    language: python
+    types: [sql]
