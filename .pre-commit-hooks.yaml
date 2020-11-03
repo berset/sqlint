@@ -3,4 +3,4 @@
     description: Checks for consistent bigquery syntax
     entry: sqlint
     language: python
-    types: [sql]
+    files: '*.sql'
