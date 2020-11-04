@@ -91,6 +91,8 @@ RESERVED_FUNCTIONS = [
 BINARY_OPERATORS_ESCAPED = [
     '=', '<', '>', '!',
     r'\+', r'\-', r'\*', '/', '%',
+    # for jinja compatibility
+    '%}',
 ]
 
 
