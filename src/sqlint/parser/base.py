@@ -1,5 +1,11 @@
 import re
-from sre_parse import Pattern
+
+# https://github.com/python/cpython/commit/e0c19ddc661e56cc7e694be52d3e47f1dfe5af24#diff-6f4de8db3ba1757963313eac399c787dfcf7069880b080e96d6a626c1f50043d
+try:
+    from sre_parse import Pattern
+except:
+    from sre_parse import State as Pattern
+
 from typing import List, Tuple
 
 from . import pattern
